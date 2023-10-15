@@ -1,5 +1,5 @@
 public class Animal {
     public String som() {
-        return "Voz produzida pelo animal";
+        return "Som produzido pelo animal";
     }
 }
