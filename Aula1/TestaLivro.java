@@ -1,9 +1,9 @@
 public class TestaLivro {
     public static void main(String[] args) {
         // Criando instâncias dos livros mais vendidos pela Amazon
-        Livro livro1 = new Livro("The Da Vinci Code", "Dan Brown", 2003, "Doubleday");
-        Livro livro2 = new Livro("teste ", "Author2", 2000, "Editora2");
-        Livro livro3 = new Livro("Title3", "Author3", 2010, "Editora3");
+        Livro livro1 = new Livro("Hello Beautifil", "Ann Napolitano", 2023, "Oprah's Book Club");
+        Livro livro2 = new Livro("The Covenant of Water", "Abraham Verghese", 2023, "Grove Press");
+        Livro livro3 = new Livro("Happy Place", "Emily Henry", 2023, "Berkley");
 
         // Exibindo o estado de cada instância
         System.out.println("Livro 1:");
