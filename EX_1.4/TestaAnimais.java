@@ -5,8 +5,8 @@ public class TestaAnimais {
         animais[1] = new Cachorro();
         animais[2] = new Boi();
 
-        for (Animal animal : animais) {
-            System.out.println(animal.som());
+        for (int i = 0; i < animais.length; i++) {
+            System.out.println("Animal " + (i + 1) + ": " + animais[i].som());
         }
     }
 }
