@@ -1,4 +1,4 @@
-class Musica {
+public class Musica {
     private String titulo;
     private String artista;
 
