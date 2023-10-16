@@ -29,7 +29,7 @@ public class TestaAnimais {
         animais[1] = new Cachorro();
         animais[2] = new Boi();
 
-        for (int i = 0; i < animais.length; i++) {
+        for (int i = 0; i < animais.length; i++) { //verificar o metodo que nao usa o i
             System.out.println("Animal " + (i + 1) + ": " + animais[i].som());
         }
     }
