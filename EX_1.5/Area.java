@@ -82,7 +82,6 @@ public class Main {
         // Calculando a área total usando a CalculadoraArea
         double areaTotal = CalculadoraArea.calcularAreaTotal(formas);
 
-        // Exibindo o resultado
         System.out.println("Área total das formas geométricas: " + areaTotal);
     }
 }
