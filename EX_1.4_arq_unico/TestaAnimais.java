@@ -18,7 +18,7 @@ class Cachorro extends Animal {
 
 class Boi extends Animal {
     public String som() {
-        return "berrar";
+        return "mugir";
     }
 }
 
