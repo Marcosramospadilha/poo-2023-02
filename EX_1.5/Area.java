@@ -1,21 +1,21 @@
 // Classe abstrata FormaGeometrica
 abstract class FormaGeometrica {
     // Método abstrato para calcular a área
-    public abstract double calcularArea();
+    abstract double calcularArea();
 }
 
 // Subclasse Circulo
 class Circulo extends FormaGeometrica {
     private double raio;
 
-    // Construtor
-    public Circulo(double raio) {
+    // construtor circulo
+    Circulo(double raio) {
         this.raio = raio;
     }
 
-    // Método para calcular a área do círculo
+    // chama a classe 
     @Override
-    public double calcularArea() {
+    double calcularArea() {
         return Math.PI * raio * raio;
     }
 }
@@ -26,14 +26,14 @@ class Retangulo extends FormaGeometrica {
     private double altura;
 
     // Construtor
-    public Retangulo(double largura, double altura) {
+    Retangulo(double largura, double altura) {
         this.largura = largura;
         this.altura = altura;
     }
 
-    // Método para calcular a área do retângulo
+    // Implementação do método calcularArea para o retângulo
     @Override
-    public double calcularArea() {
+    double calcularArea() {
         return largura * altura;
     }
 }
@@ -44,22 +44,22 @@ class Triangulo extends FormaGeometrica {
     private double altura;
 
     // Construtor
-    public Triangulo(double base, double altura) {
+    Triangulo(double base, double altura) {
         this.base = base;
         this.altura = altura;
     }
 
-    // Método para calcular a área do triângulo
+    // Implementação do método calcularArea para o triângulo
     @Override
-    public double calcularArea() {
+    double calcularArea() {
         return (base * altura) / 2;
     }
 }
 
 // Classe CalculadoraArea
 class CalculadoraArea {
-    // Método estático para calcular a área total das formas geométricas no array
-    public static double calcularAreaTotal(FormaGeometrica[] formas) {
+    // Método estático para calcular a área total
+    static double calcularAreaTotal(FormaGeometrica[] formas) {
         double areaTotal = 0;
         for (FormaGeometrica forma : formas) {
             areaTotal += forma.calcularArea();
@@ -71,17 +71,18 @@ class CalculadoraArea {
 // Exemplo de uso
 public class Main {
     public static void main(String[] args) {
-        // Criando objetos das formas geométricas
-        Circulo circulo = new Circulo(5);
-        Retangulo retangulo = new Retangulo(4, 6);
-        Triangulo triangulo = new Triangulo(3, 7);
+        // Criando instâncias das formas geométricas
+        FormaGeometrica circulo = new Circulo(5);
+        FormaGeometrica retangulo = new Retangulo(4, 6);
+        FormaGeometrica triangulo = new Triangulo(3, 7);
 
-        // Colocando as formas em um array
+        // Criando um array de formas geométricas
         FormaGeometrica[] formas = {circulo, retangulo, triangulo};
 
-        // Calculando a área total usando a CalculadoraArea
+        // Calculando a área total
         double areaTotal = CalculadoraArea.calcularAreaTotal(formas);
 
+        // Exibindo o resultado
         System.out.println("Área total das formas geométricas: " + areaTotal);
     }
 }
