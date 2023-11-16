@@ -3,7 +3,7 @@ import java.awt.event.*;
 
 public class TipoTrianguloGUI {
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Verificar Triângulo");
+        JFrame frame = new JFrame("Calculadora");
         frame.setSize(300, 200);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -11,7 +11,7 @@ public class TipoTrianguloGUI {
         frame.add(panel);
         panel.setLayout(null);
 
-        JLabel labelLado1 = new JLabel("Lado 1:");
+        JLabel labelLado1 = new JLabel("Informe um numero");
         labelLado1.setBounds(20, 20, 80, 25);
         panel.add(labelLado1);
 
@@ -19,7 +19,7 @@ public class TipoTrianguloGUI {
         textLado1.setBounds(100, 20, 165, 25);
         panel.add(textLado1);
 
-        JLabel labelLado2 = new JLabel("Lado 2:");
+        JLabel labelLado2 = new JLabel("Informe um numero");
         labelLado2.setBounds(20, 50, 80, 25);
         panel.add(labelLado2);
 
@@ -27,7 +27,7 @@ public class TipoTrianguloGUI {
         textLado2.setBounds(100, 50, 165, 25);
         panel.add(textLado2);
 
-        JLabel labelLado3 = new JLabel("Lado 3:");
+        JLabel labelLado3 = new JLabel("Escolha uma operaçao");
         labelLado3.setBounds(20, 80, 80, 25);
         panel.add(labelLado3);
 
@@ -35,7 +35,7 @@ public class TipoTrianguloGUI {
         textLado3.setBounds(100, 80, 165, 25);
         panel.add(textLado3);
 
-        JButton verificarButton = new JButton("Verificar");
+        JButton verificarButton = new JButton("Calcular");
         verificarButton.setBounds(100, 120, 100, 25);
         panel.add(verificarButton);
 
@@ -60,7 +60,7 @@ public class TipoTrianguloGUI {
                         resultadoLabel.setText("Triângulo Escaleno");
                     }
                 } catch (NumberFormatException ex) {
-                    resultadoLabel.setText("Erro: Insira números válidos.");
+                    resultadoLabel.setText("Erro: Insira números  válidos.");
                 }
             }
         });
